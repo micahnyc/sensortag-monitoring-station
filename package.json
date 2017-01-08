@@ -1,0 +1,18 @@
+{
+    "name": "sensortag-monitoring-station",
+    "version": "0.0.1",
+    "author": "Micah Acinapura <micahnyc@gmail.com>",
+    "description": "server for collecting and displaying data from a Ti sensor tag",
+    "scripts": {
+        "start": "forever ./server.js"
+    },
+    "dependencies": {
+        "express": "~3.4.7",
+        "body-parser": "~1.15.0",
+        "mongoose": "4.4.9",
+        "request": "^2.74.0",
+        "node-cron": "~1.1.1",
+        "sensortag": "~1.2.3",
+        "forever": "~0.15.3"
+    }
+}
