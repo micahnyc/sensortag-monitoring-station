@@ -10,7 +10,7 @@ app.use(express.static('public'));
 
 
 app.get('/data', function (req, res){
-    model.getReadings(50, 0, function (error, data) {
+    model.getReadings(500, 0, function (error, data) {
         if (error != null) {
             res.status(500).send({});
         } else {
