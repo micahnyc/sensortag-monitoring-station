@@ -47,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function drawChart(label, items) {
 	var margin = {top: 20, right: 60, bottom: 30, left: 20},
-			    width = 960 - margin.left - margin.right,
-			    height = 500 - margin.top - margin.bottom;
+			    width = 740 - margin.left - margin.right,
+			    height = 340 - margin.top - margin.bottom;
 
 				var x = d3.time.scale().range([0, width]);
 				var y = d3.scale.linear().range([height, 0]);
