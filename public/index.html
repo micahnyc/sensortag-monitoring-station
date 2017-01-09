@@ -3,40 +3,49 @@
 <head>
 	<title></title>
 	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.js"></script> -->
-	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="//d3js.org/d3.v3.min.js"></script>
+	
 	<script type="text/javascript" src="main.js"></script>
 
 	<style type="text/css">
-		.axis--x path {
-  			display: none;
+		.axis {
+  			shape-rendering: crispEdges;
 		}
 
-		.line {
+		.axis path, .axis line {
+			fill: none;
+			stroke-width: .5px;
+		}
+
+		.x.axis path {
+		  stroke: #000;
+		}
+
+		.x.axis line {
+		  stroke: #fff;
+		  stroke-opacity: .5;
+		}
+
+		.y.axis line {
+		  stroke: #ddd;
+		}
+
+		path.line {
 		  fill: none;
-		  stroke: steelblue;
-		  stroke-width: 1.5px;
+		  stroke: #000;
+		  stroke-width: .5px;
 		}
-		.bar {
-		  fill: yellow;
-		  stroke: steelblue;
-		  stroke-width: 1.5px;
 
+		rect.pane {
+		  cursor: move;
+		  fill: none;
+		  pointer-events: all;
 		}
+
 	</style>
 
-<!-- 	<style type="text/css">
-		#visualization {
-		    display:block;
-		    width:500px;
-		    height:552px;
-		    border: 1px solid #dddddd;
-		    border-radius:4px;
-		    background-color:#fcfcfc;
-		}
-	</style>
- --></head>
+</head>
 <body>
-<svg width="960" height="500"></svg>
 
 <div id="visualization"></div>
 

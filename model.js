@@ -28,6 +28,7 @@ module.exports.newReading = function(data, callback) {
 };
 
 module.exports.getReadings = function(limit, offset, callback) {
-	ReadingModel.find().skip(offset).limit(limit).exec(callback);
+	// ReadingModel.find().skip(offset).limit(limit).exec(callback);
+	ReadingModel.find().exec(callback);
 };
 
