@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				for (var i = 0; i < json.readings.length; i++) {
 					var newItem = {};
 					newItem.x = i;
-					newItem.y = json.readings[i].lux;
+					newItem.y = json.readings[i].humidityTemperature;
 					newItems.push(newItem);
 				}
 				console.log(newItems);

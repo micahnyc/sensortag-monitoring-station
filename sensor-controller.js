@@ -69,10 +69,14 @@ var refreshTagData = function() {
 					tag.readLuxometer(function(error, lux) {
 						console.log(tag.id, " lux read with error:", error, " lux:", lux);
 						sampleData.lux = lux;
-						console.log("------SAMPLE DATA------");
-						console.log(sampleData);
-						console.log("------END DATA------");
-						model.newReading(sampleData);
+						tag.readBatteryLevel(function(error, batteryLevel) {
+							console.log(tag.id, " battery read with error:", error, " level:", batteryLevel);
+							sampleData.batteryLevel = batteryLevel;
+							console.log("------SAMPLE DATA------");
+							console.log(sampleData);
+							console.log("------END DATA------");
+							model.newReading(sampleData);
+						});
 					});
 				});
 			});

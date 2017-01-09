@@ -17,6 +17,7 @@ mongoose.model('reading', new Schema({
 	irAmbientTemperature: {type: Number},
 	pressure: {type: Number},
 	lux: {type: Number},
+	batteryLevel: {type: Number},
 	time: {type: Date, default: Date.now}
 }));
 var ReadingModel = mongoose.model('reading');
