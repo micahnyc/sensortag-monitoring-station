@@ -29,6 +29,7 @@ module.exports.newReading = function(data, callback) {
 
 module.exports.getReadings = function(limit, offset, callback) {
 	// ReadingModel.find().skip(offset).limit(limit).exec(callback);
-	ReadingModel.find().exec(callback);
+	// ReadingModel.find().exec(callback);
+	ReadingModel.find().sort({'time': -1}).limit(2800*2).exec(callback);
 };
 

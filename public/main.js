@@ -19,9 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
 				var pressureItems = [];
 				var luxItems = [];
 				var batteryLevelItems = [];
-
-				for (var i = 0; i < json.readings.length; i++) {
-					var reading = json.readings[i];
+				var readings = json.readings.reverse();
+				for (var i = 0; i < readings.length; i++) {
+					var reading = readings[i];
 					var readingDate = parseDate(reading.time);
 					humidityItems.push({date: readingDate, value: reading.humidity});
 					humidityTemperatureItems.push({date: readingDate, value: reading.humidityTemperature});
