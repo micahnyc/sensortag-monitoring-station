@@ -23,6 +23,11 @@ $ npm start
 3. wait for a few samples to be collected
 4. visit [http://localhost:3000/](http://localhost:3000/) to see your data
 
+## Screenshots
+![alt tag](screenshots/humidity.png)
+![alt tag](screenshots/humidity-temp.png)
+
+
 ## Contributing
 
 1. Fork it!
