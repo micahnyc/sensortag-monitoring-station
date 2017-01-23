@@ -1,6 +1,6 @@
 # sensortag-monitoring-station
 
-[![GitHub version](https://badge.fury.io/gh/micahnyc%2Fsensortag-monitoring-station.svg)](https://badge.fury.io/gh/micahnyc%2Fsensortag-monitoring-station)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/gluten-free.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/as-seen-on-tv.svg)](http://forthebadge.com)
 
 A simple monitoring station for the [Ti Sensor Tag](http://www.ti.com/tool/cc2650stk). 
 
@@ -19,9 +19,9 @@ $ npm start
 ## Usage
 
 1. Turn on the sensor tag
-2. start the server
-3. wait for a few samples to be collected
-4. visit [http://localhost:3000/](http://localhost:3000/) to see your data
+2. Start the server
+3. Wait for a few samples to be collected
+4. Visit [http://localhost:3000/](http://localhost:3000/) to see your data
 
 ## Screenshots
 ![alt tag](screenshots/humidity.png)
