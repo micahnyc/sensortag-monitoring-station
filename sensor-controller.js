@@ -1,9 +1,19 @@
+/*
+sensor-controller.js
+• discover tags
+• enabled services
+• read data on timer
+
+this module runs self contained, and doens't export any functions
+
+*/
+
 var discoveredTags = [];
 var refreshInterval = null;
 
 var SensorTag = require('sensortag');
 var model = require("./model");
-//exports
+
 var initTags = function() {
 	SensorTag.discoverAll(function (sensorTag) {
         console.log("discovered %s...", sensorTag.id);
@@ -16,10 +26,11 @@ var initTags = function() {
 
 //internal
 var newTagDiscovered = function(sensorTag) {
+	//TODO - "genericize" this so that we can have a prettier function
+	//TODO - some type of error handling
 	sensorTag.connectAndSetUp(function (error) { 
 		console.log("Connected to %s...", sensorTag.id);
-		//enable services serially
-
+		//enable services serially, currently we only enable the "weather" services
 		sensorTag.enableHumidity(function (error) {
 			if (error) {
 				console.log("error enabling humidity");
@@ -55,6 +66,8 @@ var refreshTagData = function() {
 	for (var i = 0; i < discoveredTags.length; i++) {
 		tag = discoveredTags[i];
 		sampleData.tagid = tag.id;
+		//read services serially
+		//TODO - cleanup in the same way as enabling the services
 		tag.readHumidity(function (error, temperature, humidity) {
 			console.log(tag.id, " humidity read with error:", error, " temp:", temperature, " humidity:", humidity);
 			sampleData.humidity = humidity;
