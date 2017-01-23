@@ -1,7 +1,6 @@
 # sensortag-monitoring-station
 
-[![GitHub version](https://badge.fury.io/gh/boennemann%2Fbadges.svg)](http://badge.fury.io/gh/boennemann%2Fbadges)
-[![node](https://img.shields.io/node/v/gh-badges.svg?style=flat-square)]()
+[![GitHub version](https://badge.fury.io/gh/micahnyc%2Fsensortag-monitoring-station.svg)](https://badge.fury.io/gh/micahnyc%2Fsensortag-monitoring-station)
 
 A simple monitoring station for the [Ti Sensor Tag](http://www.ti.com/tool/cc2650stk). 
 
