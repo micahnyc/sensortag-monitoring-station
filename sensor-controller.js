@@ -10,9 +10,11 @@ this module runs self contained, and doens't export any functions
 
 var discoveredTags = [];
 var refreshInterval = null;
+var tagEnabled = false;
 
 var SensorTag = require('sensortag');
 var model = require("./model");
+var Config = require("./config");
 
 var initTags = function() {
 	SensorTag.discoverAll(function (sensorTag) {
@@ -49,6 +51,7 @@ var newTagDiscovered = function(sensorTag) {
 										console.log("error enabling luxo jr");
 									} else {
 										console.log("services enabled");
+										tagEnabled = true;
 									}
 								});
 							}
@@ -61,6 +64,9 @@ var newTagDiscovered = function(sensorTag) {
 }
 
 var refreshTagData = function() {
+	if (!tagEnabled) {
+		return;
+	}
 	var sampleData = {};
 	var tag = null;
 	for (var i = 0; i < discoveredTags.length; i++) {
@@ -112,7 +118,6 @@ var isNewSensor = function(id) {
 
 //startup
 initTags();
-
 refreshInterval = setInterval(function() {
 	refreshTagData();
-}, 30000);
+}, Config.sampleInterval * 1000);
