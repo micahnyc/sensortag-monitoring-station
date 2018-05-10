@@ -2,7 +2,7 @@
     "name": "sensortag-monitoring-station",
     "version": "1.0.0",
     "author": "Micah Acinapura <micahnyc@gmail.com>",
-    "description": "server for collecting and displaying data from a Ti sensor tag",
+    "description": "Server for collecting and displaying data from a Ti sensor tag",
     "scripts": {
         "start": "forever ./server.js"
     },
